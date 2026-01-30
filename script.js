@@ -5,6 +5,7 @@ const successScreen = document.getElementById('success-screen');
 const noScreen = document.getElementById('no-screen');
 
 let rainContainer = null;
+let growInterval = null;
 
 function createRain(imgSrc) {
     if (rainContainer) rainContainer.remove();
@@ -35,7 +36,13 @@ yesBtn.addEventListener('click', function() {
 noBtn.addEventListener('click', function() {
     questionScreen.classList.add('hidden');
     noScreen.classList.remove('hidden');
-    createRain('rain-sad.gif');
+    const sadImg = noScreen.querySelector('img');
+    let size = 100;
+    sadImg.style.maxWidth = size + '%';
+    growInterval = setInterval(() => {
+        size += 5;
+        sadImg.style.maxWidth = size + '%';
+    }, 200);
 });
 
 document.getElementById('back-yes').addEventListener('click', function() {
@@ -47,5 +54,6 @@ document.getElementById('back-yes').addEventListener('click', function() {
 document.getElementById('back-no').addEventListener('click', function() {
     noScreen.classList.add('hidden');
     questionScreen.classList.remove('hidden');
-    if (rainContainer) rainContainer.remove();
+    if (growInterval) clearInterval(growInterval);
+    noScreen.querySelector('img').style.maxWidth = '';
 });
