@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="question-screen">
+            <h1>divine, will you be my valentine?</h1>
+            <div class="buttons">
+                <button class="btn btn-yes" id="yes-btn">Yes</button>
+                <button class="btn btn-no" id="no-btn">No</button>
+            </div>
+        </div>
+
+        <div id="success-screen" class="hidden">
+            <h1>Yay!</h1>
+            <img src="apu.gif" alt="happy">
+            <p>Happy Valentine's Day!</p>
+            <button class="btn btn-back" id="back-yes">back</button>
+        </div>
+
+        <div id="no-screen" class="hidden">
+            <h1>...</h1>
+            <img src="sad.gif" alt="sad">
+            <p>ok</p>
+            <button class="btn btn-back" id="back-no">back</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

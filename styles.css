@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff5e4;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ff9494;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 32px;
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.btn-yes {
+    background-color: #ffe3e1;
+    color: #e67373;
+    border: 2px solid #ffe3e1;
+}
+
+.btn-yes:hover {
+    background-color: #ff9494;
+    color: #ffe3e1;
+    border-color: #ff9494;
+}
+
+.btn-no {
+    background-color: #ffe3e1;
+    color: #e67373;
+    border: 2px solid #ffe3e1;
+}
+
+.btn-no:hover {
+    background-color: #ff9494;
+    color: #ffe3e1;
+    border-color: #ff9494;
+}
+
+.hidden {
+    display: none;
+}
+
+#success-screen img,
+#no-screen img {
+    max-width: 450px;
+    margin: 20px 0;
+}
+
+#success-screen p,
+#no-screen p {
+    font-size: 1.3rem;
+}
+
+.btn-back {
+    margin-top: 20px;
+    background-color: transparent;
+    color: #e67373;
+    border: 1px solid #e67373;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+}
+
+.btn-back:hover {
+    background-color: #e67373;
+    color: #fff5e4;
+}
